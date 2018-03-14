@@ -26,22 +26,16 @@ def main():
 	s = socket.socket()
 	try:
 		s.connect((host, port))
-		#n = pynotify.Notification("")
-		#pynotify.init("liveNCID")
 		while True:
 			data = s.recv(1024)
 			if data[:4] == "CID:":
-				#n.update("Incoming Call", incomingCall(data[:-1]), os.path.abspath("./icons/phone_white.png"))
 				nmbr = incomingCall(data[:-1])
 				pyfttt.send_event(maker_key, maker_event, nmbr)
-				#n.show()
-				#time.sleep(20)
-				#n.close()
+				time.sleep(10)
 	except:
 		pass
 	finally:
 		s.close()
-
 
 if __name__ == "__main__":
 	main()
