@@ -19,19 +19,19 @@ def incomingCall(call):
 	return nmbr
 
 def main():
-	# NCID-Server (Vodafone EasyBox 602)
-	host = "127.0.0.1"
-	port = 3333
-	maker_key = "SECRET_KEY_HERE"
-	maker_event = "phone_call"
+	ncid_config = json.load(open('ncid-config.json'))
+	ncid_host = ncid_config["ncid_host"]
+	ncid_port = ncid_config["ncid_port"]
+	ifttt_key = ncid_config["ifttt_key"]
+	ifttt_event = ncid_config["ifttt_event"]
 	s = socket.socket()
 	try:
-		s.connect((host, port))
+		s.connect((ncid_host, ncid_port))
 		while True:
 			data = s.recv(1024)
 			if data[:4] == "CID:":
 				nmbr = incomingCall(data[:-1])
-				pyfttt.send_event(maker_key, maker_event, nmbr)
+				pyfttt.send_event(ifttt_key, ifttt_event, nmbr)
 				time.sleep(0.05)
 	except:
 		pass
