@@ -1,6 +1,6 @@
 {
   "ncid_host": "127.0.0.1",
-  "ncid_port": "3333",
+  "ncid_port": 3333,
   "ifttt_key": "SECRET_KEY_HERE", # Get it from https://ifttt.com/services/maker_webhooks/settings
   "ifttt_event": "phone_call"
 }
