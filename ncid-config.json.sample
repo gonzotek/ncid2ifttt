@@ -1,0 +1,6 @@
+{
+  "ncid_host": "127.0.0.1",
+  "ncid_port": "3333",
+  "ifttt_key": "SECRET_KEY_HERE",
+  "ifttt_event": "phone_call"
+}
