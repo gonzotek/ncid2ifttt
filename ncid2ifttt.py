@@ -31,7 +31,7 @@ def main():
 			if data[:4] == "CID:":
 				nmbr = incomingCall(data[:-1])
 				pyfttt.send_event(maker_key, maker_event, nmbr)
-				time.sleep(10)
+				time.sleep(.05)
 	except:
 		pass
 	finally:
