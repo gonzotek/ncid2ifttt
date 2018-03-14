@@ -2,13 +2,11 @@
 #-*-coding: utf-8-*-
 
 #
-# simple ncid-client
+# python ncid-client to pass caller id data to an ifttt webhook trigger
 #
-
 
 import socket
 import re
-#import pynotify
 import phonenumbers
 import pyfttt
 import os
@@ -21,9 +19,10 @@ def incomingCall(call):
 
 def main():
 	# NCID-Server (Vodafone EasyBox 602)
-	host = "192.168.1.141"
+	host = "127.0.0.1"
 	port = 3333
-	
+	maker_key = "SECRET_KEY_HERE"
+	maker_event = "phone_call"
 	s = socket.socket()
 	try:
 		s.connect((host, port))
@@ -34,7 +33,7 @@ def main():
 			if data[:4] == "CID:":
 				#n.update("Incoming Call", incomingCall(data[:-1]), os.path.abspath("./icons/phone_white.png"))
 				nmbr = incomingCall(data[:-1])
-				pyfttt.send_event("cfRb2o-zPtX7pcIUaDlaU5", "phone_call", nmbr)
+				pyfttt.send_event(maker_key, maker_event, nmbr)
 				#n.show()
 				#time.sleep(20)
 				#n.close()
