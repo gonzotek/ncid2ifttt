@@ -20,7 +20,7 @@ def incomingCall(call):
 
 def main():
 	ncid_config= None
-	for loc in os.curdir, os.path.expanduser("~"), "/etc/ncid2ifttt", os.environ.get("NCID2IFTTT_CONF"):
+	for loc in os.curdir, os.path.expanduser("~"), "/etc/ncid2ifttt":
 		try:
 			with open(os.path.join(loc,"ncid-config.json")) as source:
 				ncid_config = json.load(source)
