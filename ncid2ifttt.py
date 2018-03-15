@@ -24,8 +24,8 @@ def main():
 		try:
 			with open(os.path.join(loc,"ncid-config.json")) as source:
 				ncid_config = json.load(open(source))
-			except IOError:
-				pass
+		except IOError:
+			pass
 	#ncid_config = json.load(open('ncid-config.json'))
 	ncid_host = ncid_config["ncid_host"]
 	ncid_port = ncid_config["ncid_port"]
