@@ -19,7 +19,14 @@ def incomingCall(call):
 	return nmbr
 
 def main():
-	ncid_config = json.load(open('ncid-config.json'))
+	ncid_config= None
+	for loc in os.curdir, os.path.expanduser("~"), "/etc/ncid2ifttt", os.environ.get("NCID2IFTTT_CONF"):
+		try:
+			with open(os.path.join(loc,"ncid-config.json")) as source:
+				ncid_config = json.load(open(source))
+			except IOError:
+				pass
+	#ncid_config = json.load(open('ncid-config.json'))
 	ncid_host = ncid_config["ncid_host"]
 	ncid_port = ncid_config["ncid_port"]
 	ifttt_key = ncid_config["ifttt_key"]
