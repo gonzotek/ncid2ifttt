@@ -23,7 +23,7 @@ def main():
 	for loc in os.curdir, os.path.expanduser("~"), "/etc/ncid2ifttt", os.environ.get("NCID2IFTTT_CONF"):
 		try:
 			with open(os.path.join(loc,"ncid-config.json")) as source:
-				ncid_config = json.load(open(source))
+				ncid_config = json.load(source)
 		except IOError:
 			pass
 	#ncid_config = json.load(open('ncid-config.json'))
