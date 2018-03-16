@@ -26,7 +26,6 @@ def main():
 				ncid_config = json.load(source)
 		except IOError:
 			pass
-	#ncid_config = json.load(open('ncid-config.json'))
 	ncid_host = ncid_config["ncid_host"]
 	ncid_port = ncid_config["ncid_port"]
 	ifttt_key = ncid_config["ifttt_key"]
