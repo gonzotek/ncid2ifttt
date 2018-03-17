@@ -1,17 +1,13 @@
 #!/usr/bin/python
 #-*-coding: utf-8-*-
+# ncid2ifttt is a python ncid-client to pass caller id data to an ifttt webhook trigger
 
-#
-# python ncid-client to pass caller id data to an ifttt webhook trigger
-#
-
+import os
 import socket
 import re
+import json
 import phonenumbers
 import pyfttt
-import os
-import time
-import json
 
 def incomingCall(call):
 	nmbr = re.search(r"(NMBR\*)([\w]*)(\*)", call).group(2)
@@ -38,7 +34,6 @@ def main():
 			if data[:4] == "CID:":
 				nmbr = incomingCall(data[:-1])
 				pyfttt.send_event(ifttt_key, ifttt_event, nmbr)
-				#time.sleep(0.05)
 	except:
 		pass
 	finally:
@@ -46,4 +41,3 @@ def main():
 
 if __name__ == "__main__":
 	main()
-
