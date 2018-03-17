@@ -3,8 +3,8 @@
 # ncid2ifttt is a python ncid-client to pass caller id data to an ifttt webhook trigger
 
 import os
-import socket
 import re
+import socket
 import json
 import phonenumbers
 import pyfttt
