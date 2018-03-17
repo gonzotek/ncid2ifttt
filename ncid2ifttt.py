@@ -5,6 +5,7 @@
 import os
 import re
 import socket
+import time
 import json
 import phonenumbers
 import pyfttt
@@ -15,7 +16,7 @@ def incomingCall(call):
 	return nmbr
 
 def main():
-	ncid_config= None
+	ncid_config = None
 	for loc in os.curdir, os.path.expanduser("~"), "/etc/ncid2ifttt":
 		try:
 			with open(os.path.join(loc,"ncid-config.json")) as source:
@@ -34,7 +35,7 @@ def main():
 			if data[:4] == "CID:":
 				nmbr = incomingCall(data[:-1])
 				pyfttt.send_event(ifttt_key, ifttt_event, nmbr)
-			sleep(0.05)
+			time.sleep(0.1)
 	except:
 		pass
 	finally:
