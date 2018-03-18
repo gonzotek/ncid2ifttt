@@ -1,7 +1,7 @@
 # ncid2ifttt
-### A python NCID client that calls an ifttt webhook
+## A python NCID client that calls an ifttt webhook
 
-## Requirements
+### Requirements
 [ncid](http://ncid.sourceforge.net/)
 
 [Python2.7](https://www.python.org/) (may work unchanged in Python3, still untested)
@@ -10,7 +10,7 @@
 
 Python Modules: phonenumbers & pyfttt
 
-## Install Prerequisites 
+### Install Prerequisites 
 Note: Although it should be possible to run the script on Windows, Windows directions are not currently available; the following directions should work for most other platforms.
 
 Follow the directions of the projects from the links above for installing Python, git, and ncid for your platform(Windows, Linux, MacOS, raspbian, etc.).  git is also available on many platforms by using the system package manager.
@@ -21,7 +21,7 @@ sudo pip install pyfttt
 sudo pip install phonenumbers
 ```
 
-## Install ncid2ifttt
+### Install ncid2ifttt
 This script was developed on a raspberry pi, using git.
 ```shell
 git clone https://github.com/gonzotek/ncid2ifttt.git
@@ -30,7 +30,7 @@ cp  ./ncid2ifttt-config.json.sample ./ncid2ifttt-config.json
 nano ncid2ifttt-config.json
 ```
 
-## Edit Config
+### Edit Config
 Now edit the file with the IP and port of the ncid host machine, and the ifttt key and event. 
 
 **ncid_host**: The host can be the same machine you're running the client on, e.g. 127.0.0.1, or another machine on the local network.
