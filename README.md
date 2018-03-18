@@ -19,7 +19,7 @@ cp  ./ncid2ifttt-config.json.sample ./ncid2ifttt-config.json
 nano ncid2ifttt-config.json
 ```
 
-Now edit the file with the IP and port of the ncid host machine, and the ifttt key and event: 
+Now edit the file with the IP and port of the ncid host machine, and the ifttt key and event. 
 **ncid_host**: The host can be the same machine you're running the client on, e.g. 127.0.0.1, or another machine on the local network.
 
 **ncid_port**: The port should not be enclosed in quotes in the config file. 3333 is the default ncid port, only change this if you're not running on the default port.
