@@ -61,6 +61,7 @@ Once you're comfortable the script is working as expected, you can set it to aut
 sudo crontab -e
 ```
 At the bottom of the file, add a line:
+(change pi to your username, if necessary)
 ```
 @reboot /home/pi/ncid2ifttt/ncid2ifttt.py &
 ```
