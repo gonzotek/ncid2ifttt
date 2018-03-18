@@ -13,7 +13,9 @@ Python Modules: phonenumbers & pyfttt
 ## Install Prerequisites 
 Note: Although it should be possible to run the script on Windows, Windows directions are not currently available; the following directions should work for most other platforms.
 
-Follow the directions of the projects from the links above for installing Python, git, and ncid for your platform(Windows, Linux, MacOS, raspbian, etc.).  git is also available on many platforms by using the system package manager.  Additionaly, once Python is installed, the Python modules can be installed with pip:
+Follow the directions of the projects from the links above for installing Python, git, and ncid for your platform(Windows, Linux, MacOS, raspbian, etc.).  git is also available on many platforms by using the system package manager.
+
+Once Python is installed, the Python modules can be installed with pip:
 ```shell
 sudo pip install pyfttt
 sudo pip install phonenumbers
