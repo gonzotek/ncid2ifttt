@@ -36,3 +36,17 @@ Now make the script executable and run it
 chmod a+x ./ncid2ifttt.py
 ./ncid2ifttt.py
 ```
+
+If you have not already done so, on the IFTTT website you can now create an Applet with a Webhook trigger.  
+Go to https://ifttt.com/my_applets and choose "New Applet".  Search for Webhooks and follows the normal Ifttt Applet set up.
+Once you have your applet running on ifttt, you can monitor if you're successfully sending caller id data by watching the ifttt activity page at https://ifttt.com/activity.  
+
+Once you're comfortable the script is working as expected, you can set it to autostart.  This varies from system to system, but on way to do it on, e.g., a raspberry pi, is to add an entry to the crontab:
+```shell
+sudo crontab -e
+```
+At the bottom of the file, add a line:
+```
+@reboot /home/pi/ncid2ifttt/ncid2ifttt.py &
+```
+This will start the script on every reboot.
