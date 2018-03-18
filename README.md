@@ -8,7 +8,7 @@
 
 [git](https://git-scm.com/)
 
-Python Modules: phonenumbers & pyfttt
+Python Modules: [phonenumbers](https://github.com/daviddrysdale/python-phonenumbers) & [pyfttt](https://github.com/briandconnelly/pyfttt)
 
 ### Install Prerequisites 
 Note: Although it should be possible to run the script on Windows, Windows directions are not currently available; the following directions should work for most other platforms.
@@ -39,7 +39,7 @@ Now edit the file with the IP and port of the ncid host machine, and the ifttt k
 
 **ifttt_key**: You can obtain the key from this link: https://ifttt.com/services/maker_webhooks/settings .  You will find it in the last section of the url presented on the settings page, it will look like: https://maker.ifttt.com/use/xyZ123-aBCD790IUaDlaU5.  Do not include the complete URL, only the key part that comes after /use/. e.g. "xyZ123-aBCD790IUaDlaU5"
 
-**ifttt_event**: When you set up a webhook trigger, you can give it an event name, "phone_call" is the exmaple for this script, but you can use anything you want.  Just make sure it matches on ifttt and the config.
+**ifttt_event**: When you set up a webhook trigger, you can give it an event name, "phone_call" is the example for this script, but you can use anything you want.  Just make sure it matches on ifttt and the config.
 
 Press Ctrl-X to close nano, press Y to confirm saving your changes, press Enter to confirm file name.
 
