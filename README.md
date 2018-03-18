@@ -29,7 +29,9 @@ Now edit the file with the IP and port of the ncid host machine, and the ifttt k
 
 **ifttt_event**: When you set up a webhook trigger, you can give it an event name, "phone_call" is the exmaple for this script, but you can use anything you want.  Just make sure it matches on ifttt and the config
 
-Make the script executable and run it
+Press Ctrl-X to close nano, press Y to confirm saving your changes, press Enter to confirm file name.
+
+Now make the script executable and run it
 ```shell
 chmod a+x ./ncid2ifttt.py
 ./ncid2ifttt.py
