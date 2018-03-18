@@ -2,18 +2,22 @@
 ### A python NCID client that calls an ifttt webhook
 
 ## Requirements
-Python2.7 (may work unchanged in Python3, still untested)
-
-phonenumbers
-
-pyfttt
+[ncid](http://ncid.sourceforge.net/) 
+[Python2.7](https://www.python.org/) (may work unchanged in Python3, still untested)
+[git](https://git-scm.com/)
+Python Modules: phonenumbers & pyfttt
 
 ## Install Prerequisites 
+Note: Although it should be possible to run the script on Windows, Windows directions are not currently available; the following directions should work for most other platforms.
+
+Follow the directions of the projects from the links above for installing Python, git, and ncid for your platform(Windows, Linux, MacOS, raspbian, etc.).  git is also available on many platforms by using the system package manager.  Additionaly, once Python is installed, the Python modules can be installed with pip:
 ```shell
 sudo pip install pyfttt
 sudo pip install phonenumbers
 ```
+
 ## Install ncid2ifttt
+This script was developed on a raspberry pi, using git.
 ```shell
 git clone https://github.com/gonzotek/ncid2ifttt.git
 cd ncid2ifttt
@@ -28,9 +32,9 @@ Now edit the file with the IP and port of the ncid host machine, and the ifttt k
 
 **ncid_port**: The port should not be enclosed in quotes in the config file. 3333 is the default ncid port, only change this if you're not running on the default port.
 
-**ifttt_key**: You can obtain the key from this link: https://ifttt.com/services/maker_webhooks/settings .  You will find it in the last section of the url presented on the settings page, it will look like: https://maker.ifttt.com/use/xyZ123-aBCD790IUaDlaU5.  Do not include the complete URL, only the key that comes after /use/
+**ifttt_key**: You can obtain the key from this link: https://ifttt.com/services/maker_webhooks/settings .  You will find it in the last section of the url presented on the settings page, it will look like: https://maker.ifttt.com/use/xyZ123-aBCD790IUaDlaU5.  Do not include the complete URL, only the key that comes after /use/.
 
-**ifttt_event**: When you set up a webhook trigger, you can give it an event name, "phone_call" is the exmaple for this script, but you can use anything you want.  Just make sure it matches on ifttt and the config
+**ifttt_event**: When you set up a webhook trigger, you can give it an event name, "phone_call" is the exmaple for this script, but you can use anything you want.  Just make sure it matches on ifttt and the config.
 
 Press Ctrl-X to close nano, press Y to confirm saving your changes, press Enter to confirm file name.
 
