@@ -51,7 +51,8 @@ chmod a+x ./ncid2ifttt.py
 ```
 ### IFTTT Setup
 If you have not already done so, on the IFTTT website you can now create an Applet with a Webhook trigger.  
-Go to https://ifttt.com/my_applets and choose "New Applet".  Search for Webhooks and follows the normal Ifttt Applet set up.
+Go to https://ifttt.com/my_applets and choose "New Applet".  Search for Webhooks and follow the normal Ifttt Applet set up procedure.
+
 Once you have your applet running on ifttt, you can monitor if you're successfully sending caller id data by watching the ifttt activity page at https://ifttt.com/activity.  
 
 ### Autostarting the script
