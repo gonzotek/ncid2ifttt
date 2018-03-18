@@ -22,7 +22,7 @@ sudo pip install phonenumbers
 ```
 
 ### Install ncid2ifttt
-This script was developed on a raspberry pi, using git.
+Note: This script was developed on a raspberry pi, using git.  Other systems may require different installation steps (such as using a different editor than nano).
 ```shell
 git clone https://github.com/gonzotek/ncid2ifttt.git
 cd ncid2ifttt
