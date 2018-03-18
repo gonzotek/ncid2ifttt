@@ -19,7 +19,7 @@ def main():
 	ncid_config = None
 	for loc in os.curdir, os.path.expanduser("~"), "/etc/ncid2ifttt":
 		try:
-			with open(os.path.join(loc,"ncid-config.json")) as source:
+			with open(os.path.join(loc,"ncid2ifttt-config.json")) as source:
 				ncid_config = json.load(source)
 		except IOError:
 			pass
