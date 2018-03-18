@@ -49,4 +49,5 @@ At the bottom of the file, add a line:
 ```
 @reboot /home/pi/ncid2ifttt/ncid2ifttt.py &
 ```
+Press Ctrl-X to close the cron editor(nano), press Y to confirm saving your changes, press Enter to confirm file name.
 This will start the script on every reboot.
