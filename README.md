@@ -2,9 +2,12 @@
 ### A python NCID client that calls an ifttt webhook
 
 ## Requirements
-[ncid](http://ncid.sourceforge.net/) 
+[ncid](http://ncid.sourceforge.net/)
+
 [Python2.7](https://www.python.org/) (may work unchanged in Python3, still untested)
+
 [git](https://git-scm.com/)
+
 Python Modules: phonenumbers & pyfttt
 
 ## Install Prerequisites 
