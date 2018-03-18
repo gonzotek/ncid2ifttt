@@ -39,7 +39,7 @@ Now edit the file with the IP and port of the ncid host machine, and the ifttt k
 
 **ifttt_key**: You can obtain the key from this link: https://ifttt.com/services/maker_webhooks/settings .  You will find it in the last section of the url presented on the settings page, it will look like: https://maker.ifttt.com/use/xyZ123-aBCD790IUaDlaU5.  Do not include the complete URL, only the key part that comes after /use/. e.g. "xyZ123-aBCD790IUaDlaU5"
 
-**ifttt_event**: When you set up a webhook trigger, you can give it an event name, "phone_call" is the example for this script, but you can use anything you want.  Just make sure it matches on ifttt and the config.
+**ifttt_event**: When you set up a webhook trigger, you can give it an event name, "phone_call" is the example given for this script and is clear about what is happening, but you can use anything you want.  Just make sure it matches between ifttt and the config file.
 
 Press Ctrl-X to close nano, press Y to confirm saving your changes, press Enter to confirm file name.
 
@@ -56,7 +56,7 @@ Go to https://ifttt.com/my_applets and choose "New Applet".  Search for Webhooks
 Once you have your applet running on ifttt, you can monitor if you're successfully sending caller id data by watching the ifttt activity page at https://ifttt.com/activity.  
 
 ### Autostarting the script
-Once you're comfortable the script is working as expected, you can set it to autostart.  This varies from system to system, but on way to do it on, e.g., a raspberry pi, is to add an entry to the crontab:
+Once you're comfortable the script is working as expected, you can set it to autostart.  This varies from system to system, but one way to do it on, e.g., a raspberry pi, is to add an entry to the crontab:
 ```shell
 sudo crontab -e
 ```
